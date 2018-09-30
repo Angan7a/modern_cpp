@@ -76,8 +76,16 @@ void findFirstShapeMatchingPredicate(const Collection& collection,
     }
 }
 
+constexpr double fib(int a)
+{
+    if (a < 3) return 1;
+    return fib(a - 1) + fib(a - 2);
+}
+
 int main()
 {
+    constexpr double f = fib(45);
+    cout << "45-th Fibonacci's number: " << f << endl;
     Collection shapes;
     shapes.push_back(new Circle(2.0));
     shapes.push_back(new Circle(3.0));
