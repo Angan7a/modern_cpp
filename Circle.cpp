@@ -27,3 +27,8 @@ void Circle::print() const
               << "          area: " << getArea() << std::endl
               << "     perimeter: " << getPerimeter() << std::endl;
 }
+
+double Circle::getPi() const
+{
+    return M_PI;
+}

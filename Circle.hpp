@@ -13,6 +13,8 @@ public:
     double getPerimeter() const override;
     double getRadius() const;
     void print() const override;
+    [[deprecated]]
+    double getPi() const;
 
 private:
     double r_;
