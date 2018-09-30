@@ -10,7 +10,7 @@ double Square::getArea() const
     return getX() * getX();
 }
 
-double Square::getPerimeter() const
+double Square::getPerimeter() const noexcept
 {
     return 4 * getX();
 }
