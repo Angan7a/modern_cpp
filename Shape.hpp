@@ -1,7 +1,16 @@
 #pragma once
 
+enum class Color
+{
+    red,
+    blue,
+    green
+};
+
 class Shape
 {
+protected:
+    Color color;
 public:
     virtual ~Shape() {}
 
