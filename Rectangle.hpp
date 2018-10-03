@@ -8,6 +8,10 @@ public:
     Rectangle() = delete;
     Rectangle(double x, double y);
     Rectangle(const Rectangle & other) = default;
+    Rectangle(const Rectangle && other) noexcept;
+    Rectangle& operator=(const Rectangle && other) noexcept;
+    Rectangle& operator=(const Rectangle & other) = default;
+    ~Rectangle() = default;
 
     double getArea() const override;
     double getPerimeter() const override;

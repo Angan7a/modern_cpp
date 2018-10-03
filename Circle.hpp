@@ -8,6 +8,10 @@ public:
     Circle() = delete; // doesn't allow to call default constructor
     Circle(double r);
     Circle(const Circle & other) = default;
+    Circle(const Circle && other) noexcept;
+    Circle& operator = (const Circle && other) noexcept;
+    Circle& operator = (const Circle & other) = default;
+    ~Circle() = default;
 
     double getArea() const noexcept override;
     double getPerimeter() const override;

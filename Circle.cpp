@@ -6,6 +6,19 @@ Circle::Circle(double r)
     : r_(r)
 {}
 
+Circle::Circle(const Circle && other) noexcept 
+    : r_(std::move(other.r_))
+{
+    std::cout << "Move constructor " << std::endl;
+}
+
+Circle& Circle::operator = (const Circle && other) noexcept
+{
+    std::cout << "Move assignment operator" << std::endl;
+    r_ = std::move(other.r_);
+    return *this;
+}
+
 double Circle::getArea() const noexcept
 {
     return M_PI * r_ * r_;
