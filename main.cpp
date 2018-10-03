@@ -79,6 +79,7 @@ void findFirstShapeMatchingPredicate(const Collection& collection,
 
 int main()
 {
+    cout << alignof(Circle) << endl;
     Collection shapes {
     make_shared<Circle>(2.0),
     make_shared<Circle>(3.0),

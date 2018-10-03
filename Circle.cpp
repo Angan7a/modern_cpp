@@ -8,7 +8,6 @@ Circle::Circle(double r)
 
 double Circle::getArea() const noexcept
 {
-    static_assert(M_PI == 3.14, "M_PI from math.h is more accurate than 3.14");
     return M_PI * r_ * r_;
 }
 
