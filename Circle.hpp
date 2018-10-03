@@ -7,6 +7,7 @@ class alignas(2) Circle final : public Shape
 public:
     Circle() = delete; // doesn't allow to call default constructor
     Circle(double r);
+    Circle(double r, Color color);
     Circle(const Circle & other) = default;
     Circle(const Circle && other) noexcept;
     Circle& operator = (const Circle && other) noexcept;

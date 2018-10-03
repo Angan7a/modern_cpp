@@ -107,7 +107,11 @@ int main()
 
     findFirstShapeMatchingPredicate(shapes, perimeterBiggerThan20, "perimeter bigger than 20");
     findFirstShapeMatchingPredicate(shapes, areaLessThan10, "area less than 10");
-
+    
+    Circle c1(8.0);
+    Circle cc1(8.0), cc(7.0);
+    cc = move(cc1);
+    Circle c2(move(c1));
     return 0;
 }
 

@@ -3,8 +3,14 @@
 #include <iostream>
 
 Circle::Circle(double r)
-    : r_(r)
+    : Circle(r, Color::red)
 {}
+
+Circle::Circle(double r, Color color)
+    : r_(r)
+{
+    color_ = color;
+}
 
 Circle::Circle(const Circle && other) noexcept 
     : r_(std::move(other.r_))

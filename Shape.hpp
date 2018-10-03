@@ -10,7 +10,7 @@ enum class Color
 class Shape
 {
 protected:
-    Color color;
+    Color color_;
 public:
     virtual ~Shape() {}
 
