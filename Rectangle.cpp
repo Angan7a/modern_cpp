@@ -6,12 +6,12 @@ Rectangle::Rectangle(double x, double y)
       y_(y)
 {}
 
-Rectangle::Rectangle(const Rectangle && other) noexcept 
+Rectangle::Rectangle(Rectangle && other) noexcept 
     : x_(std::move(other.x_)),
       y_(std::move(other.y_))
 {}
 
-Rectangle& Rectangle::operator=(const Rectangle && other) noexcept
+Rectangle& Rectangle::operator=(Rectangle && other) noexcept
 {
     x_ = std::move(other.x_);
     y_ = std::move(other.y_);

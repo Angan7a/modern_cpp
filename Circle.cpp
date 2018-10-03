@@ -12,13 +12,13 @@ Circle::Circle(double r, Color color)
     color_ = color;
 }
 
-Circle::Circle(const Circle && other) noexcept 
+Circle::Circle(Circle && other) noexcept 
     : r_(std::move(other.r_))
 {
     std::cout << "Move constructor " << std::endl;
 }
 
-Circle& Circle::operator = (const Circle && other) noexcept
+Circle& Circle::operator = (Circle && other) noexcept
 {
     std::cout << "Move assignment operator" << std::endl;
     r_ = std::move(other.r_);

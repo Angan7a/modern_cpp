@@ -9,8 +9,8 @@ public:
     Circle(double r);
     Circle(double r, Color color);
     Circle(const Circle & other) = default;
-    Circle(const Circle && other) noexcept;
-    Circle& operator = (const Circle && other) noexcept;
+    Circle(Circle && other) noexcept;
+    Circle& operator = (Circle && other) noexcept;
     Circle& operator = (const Circle & other) = default;
     ~Circle() = default;
 
