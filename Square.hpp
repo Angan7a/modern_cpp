@@ -8,8 +8,8 @@ public:
     Square() = delete;
     Square(double x);
     Square(const Square & other) = default;
-    Square(Square && other) = default;
-    Square& operator=(Square && other) = default;
+    Square(Square && other) noexcept = default;
+    Square& operator=(Square && other) noexcept = default;
     Square& operator=(const Square & other) = default;
     ~Square() = default;
 
