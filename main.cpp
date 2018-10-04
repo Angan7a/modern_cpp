@@ -112,6 +112,9 @@ int main()
     Circle cc1(8.0), cc(7.0);
     cc = move(cc1);
     Circle c2(move(c1));
+    auto s1 = make_shape<Circle>(5.0, Color::green);
+    cout <<"Color circle is " << static_cast<int>(s1->getColor()) << endl;
+//    cout <<"Color circle is " << Color[Color::red] << endl;
     return 0;
 }
 
